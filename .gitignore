@@ -1,0 +1,11 @@
+# preview + build sources, not part of the deployed site
+_artifact.html
+_content.html
+build/
+.DS_Store
+
+# images no longer referenced by any page
+images/hero-wide.jpg
+images/hero-mid.jpg
+images/hero-small.jpg
+images/hero-alt-plate.jpg
