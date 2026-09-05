@@ -109,6 +109,13 @@
   .theme-figure figcaption { font-family:var(--sans); font-size:.74rem; line-height:1.45;
                              color:var(--ink-faint); margin-top:.55rem; }
 
+  .with-aside { display:grid; grid-template-columns:minmax(0,1fr) 14rem; gap:2.5rem; align-items:start; }
+  .aside-figure { margin:0; }
+  .aside-figure img { display:block; width:100%; height:auto; border-radius:2px;
+                      border:1px solid var(--rule-strong); }
+  .aside-figure figcaption { font-family:var(--sans); font-size:.72rem; line-height:1.45;
+                             color:var(--ink-faint); margin-top:.55rem; }
+
   .entries { display:flex; flex-direction:column; gap:2.1rem; }
   .entry-title { font-family:var(--display); font-size:1.18rem; font-weight:500;
                  line-height:1.28; margin:0 0 .35rem; text-wrap:balance; }
@@ -196,7 +203,8 @@
                   color:var(--ink-faint); }
 
   @media (max-width:52rem) {
-    .about-wrap, .theme { grid-template-columns:1fr; gap:1.75rem; }
+    .about-wrap, .theme, .with-aside { grid-template-columns:1fr; gap:1.75rem; }
+    .aside-figure { max-width:15rem; }
     .theme-figure { position:static; max-width:26rem; }
     .portrait-fig { max-width:11rem; }
   }
@@ -252,7 +260,8 @@
         <li><strong>Graduate Student Organizer</strong> &middot; Formal Theory Group, UC&nbsp;Berkeley</li>
       </ul>
     </div>
-    <div class="group">
+    <div class="group with-aside">
+      <div>
       <h3 class="subhead">Conference presentations</h3>
       <ul class="plainlist">
         <li>American Political Science Association &middot; 2024, 2025, 2026</li>
@@ -264,6 +273,11 @@
         <li>47th Annual Berkeley&ndash;Stanford Conference on Slavic, East European and Eurasian Studies</li>
         <li>Society for Institutional &amp; Organizational Economics &middot; 2022</li>
       </ul>
+      </div>
+      <figure class="aside-figure">
+        <img src="images/apsa.jpg" width="675" height="900" alt="Igor Kolesnikov at the APSA annual meeting, holding an I am Political Science sign in front of an APSA backdrop." loading="lazy">
+        <figcaption>APSA annual meeting.</figcaption>
+      </figure>
     </div>
   </section>
 </main>
