@@ -161,6 +161,12 @@
   .paperfig a { border:0; display:block; }
   .paperfig figcaption { font-family:var(--sans); font-size:.75rem; line-height:1.5;
                          color:var(--ink-faint); margin-top:.5rem; }
+  /* grouped figure: one picture above a pair; the pair's column ratios are the two
+     images' aspect ratios, so both come out the same height and share a baseline */
+  .triptych figure { margin:0; }
+  .tri-pair { display:grid; grid-template-columns:1.257fr 1.548fr; grid-template-rows:auto auto;
+              gap:0 1.1rem; margin-top:1.1rem; }
+  .tri-pair > figure { display:grid; grid-template-rows:subgrid; grid-row:span 2; }
   .presented { font-family:var(--sans); font-size:.78rem; color:var(--ink-faint); margin:.6rem 0 0; }
   .availability { font-family:var(--sans); font-size:.78rem; color:var(--ink-soft);
                   margin:.55rem 0 0; font-style:normal; }
@@ -207,6 +213,11 @@
     .aside-figure { max-width:20rem; }
     .theme-figure { position:static; max-width:26rem; }
     .portrait-fig { max-width:11rem; }
+  }
+  @media (max-width:34rem) {
+    .tri-pair { grid-template-columns:1fr; grid-template-rows:auto; }
+    .tri-pair > figure { display:block; grid-row:auto; }
+    .tri-pair > figure + figure { margin-top:1.1rem; }
   }
   @media (max-width:42rem) {
     body { font-size:16.5px; }
