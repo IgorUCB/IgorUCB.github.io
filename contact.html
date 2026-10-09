@@ -144,6 +144,12 @@
   :root[data-theme="dark"] .pill.jmp, :root:not([data-theme="light"]) .pill.jmp { color:#2a2426; }
   .pill.year { background:transparent; color:var(--ink-faint); border:1px solid var(--rule);
                font-family:var(--mono); font-variant-numeric:tabular-nums; letter-spacing:0; }
+  .pill.poster { background:var(--accent); padding:0; }
+  .pill.poster a { display:inline-block; padding:.2rem .5rem; color:#f7f3ec;
+                   border-bottom:none; transition:background .15s ease; }
+  .pill.poster a:hover { background:var(--accent-deep); }
+  .pill.poster .pdf { font-family:var(--mono); font-size:.62rem; opacity:.75;
+                      letter-spacing:0; margin-left:.25rem; }
 
   .entry.featured .entry-inner { background:var(--surface); border:1px solid var(--rule);
         border-left:3px solid var(--accent); border-radius:2px; padding:1.35rem 1.5rem; }
@@ -201,7 +207,6 @@
              color:#f7f3ec; transition:background .15s ease; }
   .cv-link:hover { background:var(--accent-deep); border-color:var(--accent-deep); color:#fff; }
   .cv-link .mono { font-family:var(--mono); font-size:.72rem; opacity:.75; }
-  .availability .mono { font-family:var(--mono); font-size:.72rem; opacity:.75; }
 
   .contact-grid { display:flex; flex-wrap:wrap; gap:2.25rem 4rem; }
   .contact-block { display:flex; flex-direction:column; gap:.3rem; }
