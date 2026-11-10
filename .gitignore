@@ -8,3 +8,6 @@ build/
 images/hero-mid.jpg
 images/hero-small.jpg
 images/hero-alt-plate.jpg
+
+# CV source (tex + fonts); only the compiled PDF is published
+cv/
